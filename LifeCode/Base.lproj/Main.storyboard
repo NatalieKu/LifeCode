@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LifeCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IT9-Uc-18Q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GHh-R8-Fkb">
+                                <rect key="frame" x="0.0" y="257" width="375" height="353"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="353" id="afQ-Mi-6SD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your LifeCode is " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-kv-Du0">
+                                <rect key="frame" x="98" y="98" width="179" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAZ-kG-kH2">
+                                <rect key="frame" x="59" y="115" width="219" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="m6H-Nk-Pvs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O80-pi-3lo">
+                                <rect key="frame" x="0.0" y="202" width="375" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="o5K-fc-oAS"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="528710231.19664001">
+                                    <!--2017-10-03 07:57:11 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-3187256400">
+                                    <!--1900-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="birthDatePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Eop-Au-d8O"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12M-Or-oqS">
+                                <rect key="frame" x="162" y="497" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KaF-aD-eHZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" backgroundImage="Body"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxV-aM-zMu"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxt-dr-phH">
+                                <rect key="frame" x="172" y="622" width="31" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="loV-Pg-sW4"/>
+                                </constraints>
+                                <state key="normal" backgroundImage=" Home"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hP2-0L-nTF"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-7U-m0a">
+                                <rect key="frame" x="147" y="164" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.40784313729999999" green="0.58431372550000005" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iAZ-kG-kH2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="59" id="0QZ-7z-z9v"/>
+                            <constraint firstItem="12M-Or-oqS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Yj-11-Pua"/>
+                            <constraint firstItem="MKd-7U-m0a" firstAttribute="centerX" secondItem="X4X-kv-Du0" secondAttribute="centerX" id="9JK-Dn-cDY"/>
+                            <constraint firstItem="X4X-kv-Du0" firstAttribute="centerX" secondItem="O80-pi-3lo" secondAttribute="centerX" id="A0u-QS-Ybv"/>
+                            <constraint firstItem="GHh-R8-Fkb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Bqe-Hi-81O"/>
+                            <constraint firstItem="iAZ-kG-kH2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="DjD-2w-WkV"/>
+                            <constraint firstItem="Vxt-dr-phH" firstAttribute="top" secondItem="GHh-R8-Fkb" secondAttribute="bottom" constant="12" id="IH2-hT-awV"/>
+                            <constraint firstItem="X4X-kv-Du0" firstAttribute="centerX" secondItem="12M-Or-oqS" secondAttribute="centerX" id="Kl0-UV-0Df"/>
+                            <constraint firstItem="Vxt-dr-phH" firstAttribute="centerX" secondItem="12M-Or-oqS" secondAttribute="centerX" id="QEe-lh-qh5"/>
+                            <constraint firstItem="MKd-7U-m0a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="147" id="Uf5-1a-cXF"/>
+                            <constraint firstItem="12M-Or-oqS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="Uol-8u-SNl"/>
+                            <constraint firstItem="MKd-7U-m0a" firstAttribute="top" secondItem="iAZ-kG-kH2" secondAttribute="bottom" constant="8" symbolic="YES" id="UqE-BD-1OQ"/>
+                            <constraint firstItem="X4X-kv-Du0" firstAttribute="centerX" secondItem="GHh-R8-Fkb" secondAttribute="centerX" id="Uvm-uQ-QPX"/>
+                            <constraint firstItem="Vxt-dr-phH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172" id="YLU-Nh-pDt"/>
+                            <constraint firstAttribute="bottom" secondItem="Vxt-dr-phH" secondAttribute="bottom" constant="20" symbolic="YES" id="dcf-8y-18S"/>
+                            <constraint firstItem="O80-pi-3lo" firstAttribute="top" secondItem="iAZ-kG-kH2" secondAttribute="bottom" constant="46" id="dgm-SN-NFb"/>
+                            <constraint firstItem="X4X-kv-Du0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="eFk-AN-pd5"/>
+                            <constraint firstItem="12M-Or-oqS" firstAttribute="top" secondItem="O80-pi-3lo" secondAttribute="bottom" constant="41" id="iXV-eI-H4o"/>
+                            <constraint firstItem="GHh-R8-Fkb" firstAttribute="top" secondItem="MKd-7U-m0a" secondAttribute="bottom" constant="13" id="m6U-1M-Vc7"/>
+                            <constraint firstAttribute="bottom" secondItem="12M-Or-oqS" secondAttribute="bottom" constant="120" id="rqU-fU-gnu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="birthDatePicker" destination="O80-pi-3lo" id="wd9-K3-AsJ"/>
+                        <outlet property="button" destination="12M-Or-oqS" id="Jyl-Mo-lMK"/>
+                        <outlet property="descriptionTextView" destination="GHh-R8-Fkb" id="Vtp-e1-JtB"/>
+                        <outlet property="imageView" destination="IT9-Uc-18Q" id="Oh2-lu-pwm"/>
+                        <outlet property="lifeCodeLabel" destination="MKd-7U-m0a" id="gme-v0-ewo"/>
+                        <outlet property="playAgianButton" destination="Vxt-dr-phH" id="HLA-5Y-MUL"/>
+                        <outlet property="selectedLabel" destination="iAZ-kG-kH2" id="Kmr-hc-xC8"/>
+                        <outlet property="yourCodeLabel" destination="X4X-kv-Du0" id="OTz-TO-Rbu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="210.40000000000001" y="164.16791604197903"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" Home" width="24" height="24"/>
+        <image name="Body" width="26" height="29"/>
+    </resources>
 </document>
